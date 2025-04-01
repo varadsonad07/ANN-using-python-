@@ -23,7 +23,7 @@ for i in range(iterations):
     b = b - learning_rate * db # update bias
 
     if i % 100 == 0:
-        print(f"iterations is : {i} : w = {w:.4f}: b = {b:.4f}: MSE = {np.mean(error ** 2):.4f}") 
+        print(f"iterations is = {i} , w = {w:.4f} , b = {b:.4f} , MSE = {np.mean(error ** 2):.4f}") 
 
 plt.scatter(x , y , color = 'blue' , label = 'True values')
 plt.plot (x , w * x + b , color = 'red' , label = 'True lines')
@@ -32,4 +32,4 @@ plt.ylabel('y')
 plt.title('Linear rigression with gradient descent')
 plt.legend()
 plt.show()
-print("")
+print(f"Final weight : {w:.4f} , Final bias {w:.4f}: ")
