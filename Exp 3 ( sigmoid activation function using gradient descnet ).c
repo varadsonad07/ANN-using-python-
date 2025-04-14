@@ -6,7 +6,7 @@ def Sigmoid_function(x):
     return 1 / (1 + np.exp(-x))
 
 def Gradient_descent(x, y, learning_rate, epochs):
-    weight = 0.2
+    weight = 0.5
     for _ in range(epochs):
         y_pred = Sigmoid_function(x * weight)
         error = y - y_pred
